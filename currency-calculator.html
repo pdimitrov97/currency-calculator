@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html manifest="currency-calculator.appcache" lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link rel="icon" sizes="192x192" href="images/currency_calculator_large.png" />
+        <link rel="apple-touch-icon" href="images/currency_calculator_large.png" />
+        <link rel="shortcut icon" href="images/currency_calculator_small.png" type="image/x-icon" />
+        <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+        <title>Currency Calculator</title>
+    </head>
+    <body>
+        <div class="content">
+            <div class="header">
+                <div id="settings_menu_button" class="settings-menu-button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <p class="header-text">Currency Calculator</p>
+            </div>
+            <div class="main">
+                <div id="settings_menu" class="settings-menu">
+                    <div class="dropdown">
+                        <p class="dropdown-info">Select Home Currency:</p>
+                        <button id="button_home_currency_dropdown" class="dropdown-button">Please select...</button>
+                        <div id="dropdown_home_currency" class="dropdown-content"></div>
+                    </div>
+                    <div class="dropdown">
+                        <p class="dropdown-info">Select Visiting Currency:</p>
+                        <button id="button_visiting_currency_dropdown" class="dropdown-button">Please select...</button>
+                        <div id="dropdown_visiting_currency" class="dropdown-content"></div>
+                    </div>
+                    <div class="dropdown">
+                        <p class="dropdown-info">Select Bank Fee:</p>
+                        <button id="button_bank_fee_dropdown" class="dropdown-button">Press to select...</button>
+                        <div id="dropdown_bank_fee" class="dropdown-content">
+                            <button id="bank_fee_0p" class="currency-button" onclick="setBankFee(this.value);" value="0">
+                                <span class="currency-button-span">0%</span>
+                            </button>
+                            <button id="bank_fee_2p" class="currency-button" onclick="setBankFee(this.value);" value="2">
+                                <span class="currency-button-span">2%</span>
+                            </button>
+                            <button id="bank_fee_4p" class="currency-button" onclick="setBankFee(this.value);" value="4">
+                                <span class="currency-button-span">4%</span>
+                            </button>
+                            <button id="bank_fee_6p" class="currency-button" onclick="setBankFee(this.value);" value="6">
+                                <span class="currency-button-span">6%</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="calculator">
+                    <div id="display" class="display">
+                        <div class="display-table">
+                            <div class="display-column"></div>
+                            <div class="display-row">
+                        <p id="display_input" class="display-line">0</p>
+                            </div>
+                            <div class="display-row">
+                            <p id="display_result" class="display-line">0</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="numpad">
+                        <div class="numpad_row">
+                            <button id="numpad_7" class="button-number" value="7">7</button>
+                            <button id="numpad_8" class="button-number" value="8">8</button>
+                            <button id="numpad_9" class="button-number" value="9">9</button>
+                        </div>
+                        <div class="numpad_row">
+                            <button id="numpad_4" class="button-number" value="4">4</button>
+                            <button id="numpad_5" class="button-number" value="5">5</button>
+                            <button id="numpad_6" class="button-number" value="6">6</button>
+                        </div>
+                        <div class="numpad_row">
+                            <button id="numpad_1" class="button-number" value="1">1</button>
+                            <button id="numpad_2" class="button-number" value="2">2</button>
+                            <button id="numpad_3" class="button-number" value="3">3</button>
+                        </div>
+                        <div class="numpad_row">
+                            <button id="numpad_clear" class="button-number" value="clear">c</button>
+                            <button id="numpad_0" class="button-number" value="0">0</button>
+                            <button id="numpad_dot" class="button-number" value="equals">.</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="snackbar" class="snackbar"></div>
+        <script src="scripts/CalculatorModel.js"></script>
+        <script src="scripts/CalculatorView.js"></script>
+        <script src="scripts/CalculatorController.js"></script>
+    </body>
+</html>

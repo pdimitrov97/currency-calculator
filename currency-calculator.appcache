@@ -1,0 +1,49 @@
+CACHE MANIFEST
+# 2019-02-07:v2
+
+# Explicitly cached 'master entries'.
+CACHE:
+currency-calculator.html
+css/stylesheet.css
+scripts/CalculatorController.js
+scripts/CalculatorModel.js
+scripts/CalculatorView.js
+images/currency_calculator_large.png
+images/currency_calculator_small.png
+images/flags/AUD.png
+images/flags/BGN.png
+images/flags/BRL.png
+images/flags/CAD.png
+images/flags/CHF.png
+images/flags/CNY.png
+images/flags/CZK.png
+images/flags/DKK.png
+images/flags/EUR.png
+images/flags/GBP.png
+images/flags/HKD.png
+images/flags/HRK.png
+images/flags/HUF.png
+images/flags/IDR.png
+images/flags/ILS.png
+images/flags/INR.png
+images/flags/ISK.png
+images/flags/JPY.png
+images/flags/KRW.png
+images/flags/MXN.png
+images/flags/MYR.png
+images/flags/NOK.png
+images/flags/NZD.png
+images/flags/PHP.png
+images/flags/PLN.png
+images/flags/RON.png
+images/flags/RUB.png
+images/flags/SEK.png
+images/flags/SGD.png
+images/flags/THB.png
+images/flags/TRY.png
+images/flags/USD.png
+images/flags/ZAR.png
+
+# Resources that require the user to be online.
+NETWORK:
+*
